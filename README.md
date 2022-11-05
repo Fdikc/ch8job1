@@ -1,5 +1,5 @@
 # Experment_fdick
-## 图书管理系统
+## 课程管理系统
 
 #### 基于mybatis+servlet(Maven方式构建)
 
