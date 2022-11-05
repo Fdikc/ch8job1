@@ -47,7 +47,7 @@ public class CourseServlet extends HttpServlet {
         CourseService courseService = new CourseService();
         List<Course> courses = courseService.getAllCourse();
         req.setAttribute("courses",courses);
-        Object user = req.getSession().getAttribute("user");
+        req.getSession().getAttribute("user")
         req.setAttribute("user",user);
         System.out.println(req.getSession().getAttribute("user")+"   find kec");
         req.getRequestDispatcher("/index.jsp").forward(req,resp);

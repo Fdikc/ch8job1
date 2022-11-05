@@ -8,7 +8,7 @@
 
 ### 项目简介
 
-本图书管理系统基于Mybatis,MybatisPlus,Servlet,jsp。数据库为mysql。前端使用了Bootstrap。 
+本系统基于Mybatis,Servlet,jsp。数据库为mysql。前端使用了Bootstrap。 
 
 ### 系统功能
 
@@ -33,7 +33,7 @@
 ### 如何使用
 
 ```
-$ https://github.com/Fdikc/ch8job1.git
+$ git clone https://github.com/Fdikc/ch8job1.git
 ```
 
 ### 说明<br/>
