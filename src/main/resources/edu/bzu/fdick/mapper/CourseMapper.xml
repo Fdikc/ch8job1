@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+<mapper namespace="edu.bzu.fdick.mapper.CourseMapper">
+
+    <resultMap id="CourseMap" type="Course">
+        <!-- id为主键 -->
+        <id column="id" property="id"/>
+        <!-- column是数据库表的列名 , property是对应实体类的属性名 -->
+        <result column="create_Time" property="createTime"/>
+    </resultMap>
+
+
+
+    <select id="selectAll"  resultMap="CourseMap">
+        select * from course
+    </select>
+    <select id="searchById" resultMap="CourseMap">
+        select
+        *
+        from course
+        where
+        id = #{id}
+    </select>
+    <select id="searchByCreateTimeBetween" resultMap="CourseMap">
+        select
+        *
+        from course
+        where
+        create_Time between
+
+            #{beginCreateTime} and #{endCreateTime}
+
+    </select>
+    <insert id="insertAll">
+        insert into course
+        (couname, miaoshu,
+         pic, create_Time, teacher)
+        values (#{id}, #{couname,jdbcType=VARCHAR}, #{miaoshu,jdbcType=VARCHAR},
+                #{pic,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{teacher,jdbcType=VARCHAR})
+
+    </insert>
+    <delete id="delById">
+        delete
+        from course
+        where id = #{id}
+    </delete>
+
+</mapper>

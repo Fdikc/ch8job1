@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+<mapper namespace="edu.bzu.fdick.mapper.UserMapper">
+
+
+    <resultMap id="UserMap" type="User">
+        <!-- id为主键 -->
+
+        <result column="userName" property="username"/>
+        <result column="userPass" property="password"/>
+    </resultMap>
+
+    <select id="searchByUsernameAndPassword" resultMap="UserMap">
+        select
+        *
+        from userinfo
+        where
+        userName = #{username,jdbcType=VARCHAR}
+        AND userPass = #{password,jdbcType=VARCHAR}
+    </select>
+</mapper>

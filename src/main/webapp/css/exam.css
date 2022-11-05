@@ -1,0 +1,22 @@
+
+header  {
+    background: url(/images/nav.jpg) repeat-x;
+    height: 177px;
+    width: 100%;
+    color: #ffffff;
+}
+h2 {
+    color: #ffffff;
+    position: relative;
+    top: 40%;
+    text-align: center;
+}
+img {
+    width:80px;
+    height: 110px;
+}
+.panel-size
+{
+    margin-left: 15%;
+    margin-right: 15%;
+}
