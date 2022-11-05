@@ -8,7 +8,7 @@
 
 ### 项目简介
 
-本图书管理系统基于Mybatis,MybatisPlus,Servlet,jsp。数据库为mysql。前端使用了Bootstrap。 
+本系统基于Mybatis,MybatisPlus,Servlet,jsp。数据库为mysql。前端使用了Bootstrap。 
 
 ### 系统功能
 
