@@ -33,7 +33,7 @@
 ### 如何使用
 
 ```
-$ https://github.com/Fdikc/ch8job1.git
+$ git clone https://github.com/Fdikc/ch8job1.git
 ```
 
 ### 说明<br/>

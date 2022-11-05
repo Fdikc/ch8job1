@@ -1,6 +1,7 @@
 package edu.bzu.fdick.servlet;
 
 import edu.bzu.fdick.entity.Course;
+import edu.bzu.fdick.entity.User;
 import edu.bzu.fdick.service.CourseService;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -47,7 +48,8 @@ public class CourseServlet extends HttpServlet {
         CourseService courseService = new CourseService();
         List<Course> courses = courseService.getAllCourse();
         req.setAttribute("courses",courses);
-        req.getSession().getAttribute("user")
+        req.getSession().getAttribute("user");
+        User user = (User)req.getSession().getAttribute("user");
         req.setAttribute("user",user);
         System.out.println(req.getSession().getAttribute("user")+"   find kec");
         req.getRequestDispatcher("/index.jsp").forward(req,resp);
