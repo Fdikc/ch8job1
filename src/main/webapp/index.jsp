@@ -101,11 +101,6 @@
     </c:if>
     </tbody>
 </table>
-user :
-${sessionScope.user}
-${user}
-${sessionScope.user.username}
-
 
 
 </body>
